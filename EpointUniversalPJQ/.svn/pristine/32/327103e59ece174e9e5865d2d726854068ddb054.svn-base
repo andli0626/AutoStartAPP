@@ -1,0 +1,33 @@
+package com.epoint.epointuniversal;
+
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.View;
+import android.view.WindowManager;
+
+import com.epoint.epointuniversal.pjq.R;
+
+public class MainActivity extends SuperPhonePage {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// 设置全屏
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		getLlContent().setSystemUiVisibility(
+				View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+		
+
+		addContentViewAndTitle(R.layout.activity_main, "主页");
+		
+		hideTopBar();
+		
+		// 1024*561
+		DisplayMetrics dm = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		Log.i("andli", "屏幕分辨率为:" + dm.widthPixels + " * " + dm.heightPixels);
+
+	}
+}

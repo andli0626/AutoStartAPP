@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlTopBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/topmenu_height"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/top_back_image" >
+
+        <ImageButton
+            android:id="@+id/ivLeft"
+            android:layout_width="44sp"
+            android:layout_height="44sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/img_top_back_a" />
+
+        <ImageButton
+            android:id="@+id/ivRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/top_right_btnbg1"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btRight"
+            android:layout_width="45sp"
+            android:layout_height="36sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5sp"
+            android:background="@drawable/wb_btn"
+            android:paddingBottom="2sp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="添加标题"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5sp"
+            android:layout_toLeftOf="@+id/btRight"
+            android:layout_toRightOf="@id/tvTitle"
+            android:gravity="center_vertical|right" >
+
+            <ProgressBar
+                android:id="@+id/pbGress"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ScrollView>
+
+</LinearLayout>

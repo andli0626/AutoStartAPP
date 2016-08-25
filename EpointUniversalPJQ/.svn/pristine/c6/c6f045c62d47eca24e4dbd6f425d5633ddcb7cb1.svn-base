@@ -1,0 +1,23 @@
+package com.epoint.epointuniversal;
+
+import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
+
+import com.epoint.epointuniversal.pjq.R;
+
+public class MainActivity extends SuperPhonePage {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// 设置全屏
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		getLlContent().setSystemUiVisibility(
+				View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+
+		addContentViewAndTitle(R.layout.activity_main, "主页");
+
+	}
+}
